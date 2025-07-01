@@ -14,8 +14,8 @@
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-10 col-lg-8">
-                            <h1 class="display-2 text-white animated slideInDown mb-4">The School For The Gifted  Child</h1>
-                            <!-- <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we nurture gifted children by providing a challenging and supportive environment where potential is recognized and excellence is cultivated.</p> -->
+                            <h1 class="display-2 text-white animated slideInDown mb-4">We Beat Them All</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we nurture gifted children by providing a challenging and supportive environment where potential is recognized and excellence is cultivated.</p>
                             <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
                             <a href="{% url 'classes' %}" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
                         </div>
@@ -23,49 +23,52 @@
                 </div>
             </div>
         </div>
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{% static 'img/dis_pupils.jpeg' %}" alt="">
-           
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h1 class="display-2 text-white animated slideInDown mb-4">We Beat Them All</h1>
-                            <!-- <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we stand out through excellence in academics, character, and leadership — we set the standard and surpass expectations.</p> -->
-                            <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
-                            <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+        <!--Start of carousel image2  -->
 
         <div class="owl-carousel-item position-relative">
             <img class="img-fluid" src="{% static 'img/dis_cross_section_of_teachers.jpeg' %}" alt="">
-           
-           
             <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                 <div class="container">
                     <div class="row justify-content-start">
                         <div class="col-10 col-lg-8">
-                            <h1 class="display-2 text-white animated slideInDown mb-4">We Beat Them All</h1>
-                            <!-- <p class="fs-5 fw-medium text-white mb-4 pb-2">Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.</p> -->
+                            <h1 class="display-2 text-white animated slideInDown mb-4">The School For The Gifted  Child</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we nurture gifted children by providing a challenging and supportive environment where potential is recognized and excellence is cultivated.</p>
                             <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
-                            <a href="" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
+                            <a href="{% url 'classes' %}" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+<!-- End of Carousel image 2 -->
+
+
+
+<!--Start of Carousel image 3 -->
+<div class="owl-carousel-item position-relative">
+            <img class="img-fluid" src="{% static 'img/dis_pupils_in_class.jpeg' %}" alt="">
+            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                <div class="container">
+                    <div class="row justify-content-start">
+                        <div class="col-10 col-lg-8">
+                            <h1 class="display-2 text-white animated slideInDown mb-4">The School For The Gifted  Child</h1>
+                            <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we nurture gifted children by providing a challenging and supportive environment where potential is recognized and excellence is cultivated.</p>
+                            <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
+                            <a href="{% url 'classes' %}" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- End of Carousel image 3 -->
     </div>
 </div>
+
+
 <!-- Carousel End -->
 
-
-{% include "partials/facility.html" %} 
-{% include "partials/about.html" %} 
-{% include "partials/classes.html" %} 
-{% include "partials/appointment.html" %}
-{% include "partials/testimonials.html" %} 
-         
+     
 {% endblock %}

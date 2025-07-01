@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    DIS | Login
+{% endblock %}
+
+{% block cssFile %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- Page Header End -->
+<div class="container-xxl py-5 page-header position-relative mb-5">
+    <div class="container py-5">
+        <h1 class="display-2 text-white animated slideInDown mb-4">Login</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Login</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<div class="container"> <!--START OF CONTAINER-->
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+        <div class="form-group">
+            <input type="email" placeholder="Email" required />
+        </div>
+        <div class="form-group">
+            <input type="password" placeholder="Password" id="password" required />
+            <span class="toggle-password" onclick="togglePassword()">Show</span>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+        <div class="form-footer">
+        <a href="#">Forgot password?</a>
+        </div>
+    </div>
+
+</div> <!--End of Container -->
+{% endblock %}

@@ -44,11 +44,13 @@
         <!-- Spinner End -->
 
     {% include "partials/navbar.html" %}
+    <div class="base-container">
+        {% block content %}
+        <!-- Page content goes here -->
+        {% endblock %}
 
-    {% block content %}
-    <!-- Page content goes here -->
-    {% endblock %}
-
+    </div>
+    
     {% include "partials/footer.html" %}
 
 </div>

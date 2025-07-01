@@ -79,3 +79,16 @@
     
 })(jQuery);
 
+
+
+function togglePassword() {
+    const pwd = document.getElementById('password');
+    const toggle = document.querySelector('.toggle-password');
+    if (pwd.type === 'password') {
+      pwd.type = 'text';
+      toggle.textContent = 'Hide';
+    } else {
+      pwd.type = 'password';
+      toggle.textContent = 'Show';
+    }
+  }
