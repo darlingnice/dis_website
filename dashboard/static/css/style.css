@@ -1993,7 +1993,7 @@ label {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-color: #0061f7 !important;
+  background-color: #1A237E  !important; 
   width: 253px;
   padding: 20px 15px 37px 20px;
   -webkit-transition: 0.5s all;
@@ -2027,6 +2027,7 @@ label {
 
 .sidebar-body {
   padding-top: 20px;
+  background-color: black;
 }
 
 .sidebar-body-menu li {
@@ -2674,7 +2675,7 @@ label {
 
 .stat-cards-icon.purple {
   background-color: rgba(95, 46, 234, 0.1);
-  color: #5f2eea;
+  color: #1A237E;
 }
 
 .stat-cards-icon.success {

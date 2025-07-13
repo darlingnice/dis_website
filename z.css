@@ -1,0 +1,9 @@
+/* Inside your CSS */
+.mobile-only {
+  display: inline-block;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssFile %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/parents.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Parents Page -->
+{% include 'partials/page_header.html' with page_title="Parents" %}
+
+<section class="parents-intro">
+  <div class="container">
+    <h2>Welcome, Parents!</h2>
+   <div class="parents-message">
+  <p>
+    At Divine International Schools, we believe that education thrives best when there is a strong, active partnership between the school and the home. Parents play a vital role in supporting their children's learning journey, both academically and personally.
+  </p>
+  <p>
+    This page is designed to serve as a central hub for all the essential information, tools, and resources our parents need. From academic calendars and newsletters to school policies and PTA updates, everything you need to stay informed, engaged, and connected with school life is right here.
+  </p>
+  <p>
+    Whether you're looking to track upcoming events, get involved in school activities, or simply communicate with teachers and staff, we’re here to make the process smooth and supportive. Together, we can build a nurturing environment where every child thrives.
+  </p>
+</div>
+
+  </div>
+</section>
+
+<section class="parents-links">
+  <div class="container grid">
+    <div class="card">
+      <h3>School Calendar</h3>
+      <p>Stay updated on term dates, holidays, and special events.</p>
+   
+      <a href="#" class="link-btn">View Calendar</a>
+         
+    </div>
+    <div class="card">
+      <h3>PTA Information</h3>
+      <p>Learn more about our active Parent-Teacher Association.</p>
+      
+      <a href="#" class="link-btn">View PTA Info</a>
+  
+    </div>
+    <div class="card">
+      <h3>Newsletters</h3>
+      <p>Catch up on recent news and announcements.</p>
+       
+      <a href="#" class="link-btn">Read Newsletters</a>
+     
+    </div>
+    <div class="card">
+      <h3>Policies & Guidelines</h3>
+      <p>View our school's rules, uniform guide, and more.</p>
+       
+      <a href="#" class="link-btn">View Policies</a>
+       
+    </div>
+    <div class="card">
+      <h3>Contact Teachers</h3>
+      <p>Need to speak with a teacher or administrator?</p>
+      <a href="{% url 'contact' %}" class="link-btn">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

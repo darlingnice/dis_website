@@ -29,3 +29,10 @@ def testimonials(request):
 
 def contact(request):
     return render(request,"contact.html",{})
+
+def parents(request):
+     return render(request,"parents.html",{})
+
+
+def admissions(request):
+     return render(request,"admissions.html",{})

@@ -1,86 +1,41 @@
 {% load static %}
-        <!-- Footer Start -->
-        <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5">
-                <div class="row g-5">
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Get In Touch</h3>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>37/38 Evengelist Augustine Ibeabuchi Crescent,World Bank Housing Estate  Street,Aba, Abia State</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+234802220558</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>divineinternanationalschools@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Quick Links</h3>
-                        <a class="btn btn-link text-white-50" href="{% url 'about' %}">About Us</a>
-                        <a class="btn btn-link text-white-50" href="">Contact Us</a>
-                        <a class="btn btn-link text-white-50" href="">Our Services</a>
-                        <a class="btn btn-link text-white-50" href="">Privacy Policy</a>
-                        <a class="btn btn-link text-white-50" href="">Terms & Condition</a>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Photo Gallery</h3>
-                        <div class="row g-2 pt-2">
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{% static 'img/dis_awards.jpeg' %}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{% static 'img/dis_cross_section_of_teachers.jpeg' %}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{% static 'img/dis_pupils_in_class.jpeg' %}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{% static 'img/dis_pupil_grown.jpeg' %}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{% static 'img/dis_award_b4.jpeg' %}" alt="">
-                            </div>
-                            <div class="col-4">
-                                <img class="img-fluid rounded bg-light p-1" src="{% static 'img/dis_award_b4.jpeg' %}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <h3 class="text-white mb-4">Newsletter</h3>
-                        <p>Subscribe to our newsletter to receive the latest news, updates, and events happening at Divine International Schools.
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h2>DIS</h2>
+        <p>Providing quality education through innovation, discipline, and academic excellence at Divine International Schools.</p>
+        <p><i class="fab fa-facebook"></i> @DivineSchools</p>
+        <p><i class="fab fa-twitter"></i> @DivineSchools</p>
+        <p><i class="fab fa-linkedin"></i> @DivineSchools</p>
+        <p><i class="fab fa-instagram"></i> @DivineSchools</p>
+      </div>
 
-                            Get insights into our innovative teaching methods, upcoming school events, and exclusive offers directly to your inbox. Don’t miss out on the exciting developments happening at our school!</p>
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">DIS</a>, All Right Reserved. 
-							
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End -->
+      <div class="footer-section links">
+        <h2>Company</h2>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+      </div>
 
+      <div class="footer-section contact">
+        <h2>Contact</h2>
+        <p>Email: divineinternationalschools@gmail.com</p>
+        <p>Phone: +234 802 220 2558</p>
+        <p>Address: 37/38 Evangelist Augustine Ibeabuchi Crescent, World Bank Housing Estate Street, Aba, Abia State</p>
+      </div>
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+      <div class="footer-section newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <form>
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
     </div>
 
+    <div class="footer-bottom">
+      <p>&copy; 2025 Divine International Schools. All rights reserved.</p>
+    </div>
+  </footer>

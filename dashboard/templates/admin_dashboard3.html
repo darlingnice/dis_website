@@ -1,80 +1,84 @@
-{% load static %}
-
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DIS Aba Dashboard</title>
-  {% block cssFile %}
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Feather Icons -->
   <script src="https://unpkg.com/feather-icons"></script>
-  <link rel="stylesheet" href="{% static 'css/admin_dashboard.css' %}">
-  {% endblock %}
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/admin_dashboard2.css' %}">
 </head>
 
 <body>
-  <button id="mobileToggle" class="mobile-toggle">
-    <i data-feather="menu"></i>
-  </button>
   <div class="dashboard">
+    <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
-        <span class="logo-title">DIS Aba</span>
-        <button id="desktopToggle" class="toggle-btn"><i data-feather="chevrons-left"></i></button>
+        <h2>DIS Aba</h2>
+        <button class="toggle-btn" id="toggleSidebar">
+          <i data-feather="menu"></i>
+        </button>
       </div>
       <nav class="sidebar-nav">
-        <a class="active" href="#"><i data-feather="home"></i> <span class="nav-text">Dashboard</span></a>
-
+        <a class="active" href="/">Dashboard</a>
         <details>
-          <summary><i data-feather="user"></i> <span class="nav-text">Students</span></summary>
+          <summary>Students</summary>
           <a href="{% url 'add_student' %}">New Student</a>
           <a href="#">Students List</a>
           <a href="#">View Bio</a>
         </details>
         <details>
-          <summary><i data-feather="users"></i> <span class="nav-text">Staff</span></summary>
+          <summary>Staff</summary>
           <a href="#">New Staff</a>
           <a href="#">Staff List</a>
         </details>
         <details>
-          <summary><i data-feather="file-text"></i> <span class="nav-text">Results</span></summary>
+          <summary>Results</summary>
           <a href="#">Upload</a>
           <a href="#">Approve</a>
           <a href="#">View</a>
         </details>
         <details>
-          <summary><i data-feather="layers"></i> <span class="nav-text">Classes</span></summary>
+          <summary>Classes</summary>
           <a href="#">New Class</a>
-          <a href="#">Class List</a>
+          <a href="#">Classes</a>
         </details>
         <details>
-          <summary><i data-feather="calendar"></i> <span class="nav-text">Time Table</span></summary>
+          <summary>Time Table</summary>
           <a href="#">Create New</a>
           <a href="#">Modify</a>
           <a href="#">View</a>
         </details>
         <hr>
-        <a href="#"><i data-feather="sliders"></i> <span class="nav-text">Appearance</span></a>
-        <a href="#"><i data-feather="settings"></i> <span class="nav-text">Settings</span></a>
+        <a href="#">Appearance</a>
+        <a href="#">Settings</a>
       </nav>
     </aside>
+
+    <!-- Main Content -->
     <main class="main">
       <header class="topbar">
+        <button class="toggle-btn mobile-only" id="mobileToggle">
+          <i data-feather="menu"></i>
+        </button>
         <input type="text" placeholder="Search..." class="search-box">
         <div class="topbar-actions">
           <i data-feather="bell"></i>
           <i data-feather="sun"></i>
-          <img class="avatar" src="https://i.pravatar.cc/36" alt="Avatar" />
+          <img src="{% static 'img/avatar/avatar-illustrated-02.png' %}" alt="User" class="avatar">
         </div>
       </header>
-      <div class="content">
-        <h1>Dashboard</h1>
 
-        <!-- dynamic pages  -->
-         {% block page %}
-
+      <section class="content">
+        <h1>Dashboard Overview</h1>
         <div class="card-grid">
           <div class="card">
             <i data-feather="users"></i>
@@ -93,33 +97,37 @@
           </div>
           <div class="card">
             <i data-feather="layers"></i>
-            <h2>10 Classes</h2>
+            <h2>10</h2>
             <p>Total Classes</p>
           </div>
         </div>
+      </section>
 
-        {% endblock %}
-        <footer class="footer">
-          <p>2025 © DIS Aba Dashboard - <a href="#">disaba.com</a></p>
-        </footer>
-      </div>
+      <footer class="footer">
+        <p>2025 © DIS Aba Dashboard - <a href="#">disaba.com</a></p>
+      </footer>
     </main>
   </div>
+
+  <!-- JS -->
   <script>
+  document.addEventListener('DOMContentLoaded', function () {
     feather.replace();
 
-    const mobileToggle = document.getElementById('mobileToggle');
-    const desktopToggle = document.getElementById('desktopToggle');
     const sidebar = document.getElementById('sidebar');
+    const toggleSidebar = document.getElementById('toggleSidebar');
+    const mobileToggle = document.getElementById('mobileToggle');
 
-    mobileToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('mobile-open');
+    [toggleSidebar, mobileToggle].forEach(btn => {
+      if (btn) {
+        btn.addEventListener('click', () => {
+          sidebar.classList.toggle('open');
+        });
+      }
     });
+  });
+</script>
 
-    desktopToggle.addEventListener('click', () => {
-      sidebar.classList.toggle('collapsed');
-    });
-  </script>
 </body>
 
 </html>

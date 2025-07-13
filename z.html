@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DIS Aba Dashboard</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'css/admin_dashboard2.css' %}" />
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <span class="logo-title">DIS Aba</span>
+
+        <!-- Desktop Toggle -->
+        <button id="desktopToggle" class="toggle-btn desktop-only" title="Collapse sidebar">
+          <i data-feather="chevrons-left"></i>
+        </button>
+
+        <!-- Mobile Toggle -->
+        <button id="mobileToggle" class="toggle-btn mobile-only" title="Menu">
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="/" class="active">
+          <i data-feather="home"></i>
+          <span class="nav-text">Dashboard</span>
+        </a>
+
+        <details>
+          <summary>
+            <i data-feather="users"></i>
+            <span class="nav-text">Students</span>
+          </summary>
+          <a href="{% url 'add_student' %}">New Student</a>
+          <a href="#">Students List</a>
+          <a href="#">View Bio</a>
+        </details>
+
+        <details>
+          <summary>
+            <i data-feather="user-check"></i>
+            <span class="nav-text">Staff</span>
+          </summary>
+          <a href="#">New Staff</a>
+          <a href="#">Staff List</a>
+        </details>
+
+        <details>
+          <summary>
+            <i data-feather="bar-chart-2"></i>
+            <span class="nav-text">Results</span>
+          </summary>
+          <a href="#">Upload</a>
+          <a href="#">Approve</a>
+          <a href="#">View</a>
+        </details>
+
+        <details>
+          <summary>
+            <i data-feather="layers"></i>
+            <span class="nav-text">Classes</span>
+          </summary>
+          <a href="#">New Class</a>
+          <a href="#">Classes</a>
+        </details>
+
+        <details>
+          <summary>
+            <i data-feather="calendar"></i>
+            <span class="nav-text">Time Table</span>
+          </summary>
+          <a href="#">Create New</a>
+          <a href="#">Modify</a>
+          <a href="#">View</a>
+        </details>
+
+        <hr />
+
+        <a href="#">
+          <i data-feather="settings"></i>
+          <span class="nav-text">Appearance</span>
+        </a>
+
+        <a href="#">
+          <i data-feather="tool"></i>
+          <span class="nav-text">Settings</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main">
+      <header class="topbar">
+        <input type="text" class="search-box" placeholder="Search..." />
+        <div class="topbar-actions">
+          <button class="icon-btn" title="Notifications">
+            <i data-feather="bell"></i>
+          </button>
+          <button class="icon-btn" title="Theme">
+            <i data-feather="sun"></i>
+          </button>
+          <img class="avatar" src="{% static 'img/avatar/avatar-illustrated-02.png' %}" alt="User" />
+        </div>
+      </header>
+
+      <div class="content">
+        <h1>Dashboard</h1>
+
+        <div class="card-grid">
+          <div class="card">
+            <i data-feather="users"></i>
+            <h2>250</h2>
+            <p>Enrolled Students</p>
+          </div>
+          <div class="card">
+            <i data-feather="user-check"></i>
+            <h2>50</h2>
+            <p>Teaching Staff</p>
+          </div>
+          <div class="card">
+            <i data-feather="calendar"></i>
+            <h2>5 Days</h2>
+            <p>Upcoming Exams</p>
+          </div>
+          <div class="card">
+            <i data-feather="layers"></i>
+            <h2>10</h2>
+            <p>Total Classes</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>2025 © DIS Aba Dashboard - <a href="#">disaba.com</a></p>
+      </footer>
+    </main>
+  </div>
+
+  <!-- JS Toggle -->
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const mobileToggle = document.getElementById('mobileToggle');
+    const desktopToggle = document.getElementById('desktopToggle');
+
+    mobileToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('mobile-open');
+    });
+
+    desktopToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+    });
+
+    feather.replace();
+  </script>
+</body>
+</html>

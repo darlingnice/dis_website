@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block cssFile %}
+  {{ block.super }}
+  <link rel="stylesheet" href="{% static 'css/admissions.css' %}">
+{% endblock %}
+
+{% block content %}
+{% include 'partials/page_header.html' with page_title="Admissions" %}
+
+<section class="admissions-welcome">
+  <div class="container">
+    <h2>Welcome to Admissions</h2>
+    <p>We're excited you're considering Divine International Schools for your child's education. We aim to make the admissions process clear, simple, and welcoming for every family.</p>
+  </div>
+</section>
+
+<section class="why-choose">
+  <div class="container grid">
+    <div class="box">
+      <h3>Academic Excellence</h3>
+      <p>High-performing curriculum and passionate educators who inspire success.</p>
+    </div>
+    <div class="box">
+      <h3>Safe, Caring Environment</h3>
+      <p>We nurture the whole child in a supportive, values-based atmosphere.</p>
+    </div>
+    <div class="box">
+      <h3>Modern Facilities</h3>
+      <p>Equipped labs, digital classrooms, sports grounds, and fine arts studios.</p>
+    </div>
+  </div>
+</section>
+
+<section class="admission-steps">
+  <div class="container">
+    <h2>How to Apply</h2>
+    <ol>
+      <li>Complete the online application form</li>
+      <li>Upload required documents (birth cert, passport photo, last report)</li>
+      <li>Pay the application processing fee</li>
+      <li>Schedule and attend an interview or placement test</li>
+      <li>Await admission decision via email or phone</li>
+    </ol>
+  </div>
+</section>
+
+<section class="requirements">
+  <div class="container">
+    <h2>Admission Requirements</h2>
+    <ul>
+      <li>Completed application form</li>
+      <li>Child’s birth certificate</li>
+      <li>Two recent passport photos</li>
+      <li>Previous school report </li>
+      <li>Medical record or immunization card</li>
+    </ul>
+  </div>
+</section>
+
+<section class="fees-info">
+  <div class="container">
+    <h2>Fees & Financial Info</h2>
+    <p>Tuition and fees are structured by grade level. For detailed breakdown, please 
+        {% comment %}
+        <a href="{% url 'fees' %}" class="link-btn">Download Our Fee Schedule</a>.
+        {% endcomment %}
+    </p>
+  </div>
+</section>
+
+<section class="contact-admissions">
+  <div class="container">
+    <h2>Need Help with Admissions?</h2>
+    <p>We're here to support you every step of the way. Feel free to reach out.</p>
+    <a href="{% url 'contact' %}" class="link-btn">Contact Admissions Office</a>
+  </div>
+</section>
+{% endblock %}

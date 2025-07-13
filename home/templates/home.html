@@ -5,70 +5,123 @@
 
 {% block content %}
 
- <!-- Carousel Start -->
- <div class="container-fluid p-0 mb-4">
-    <div class="owl-carousel header-carousel position-relative">
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{% static 'img/dis_award_b4.jpeg' %}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h1 class="display-2 text-white animated slideInDown mb-4">We Beat Them All</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we nurture gifted children by providing a challenging and supportive environment where potential is recognized and excellence is cultivated.</p>
-                            <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
-                            <a href="{% url 'classes' %}" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-
-        <!--Start of carousel image2  -->
-
-        <div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{% static 'img/dis_cross_section_of_teachers.jpeg' %}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h1 class="display-2 text-white animated slideInDown mb-4">The School For The Gifted  Child</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we nurture gifted children by providing a challenging and supportive environment where potential is recognized and excellence is cultivated.</p>
-                            <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
-                            <a href="{% url 'classes' %}" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- End of Carousel image 2 -->
+  <!-- Hero Section -->
+{% include 'partials/hero.html' %}
 
 
 
-<!--Start of Carousel image 3 -->
-<div class="owl-carousel-item position-relative">
-            <img class="img-fluid" src="{% static 'img/dis_pupils_in_class.jpeg' %}" alt="">
-            <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                <div class="container">
-                    <div class="row justify-content-start">
-                        <div class="col-10 col-lg-8">
-                            <h1 class="display-2 text-white animated slideInDown mb-4">The School For The Gifted  Child</h1>
-                            <p class="fs-5 fw-medium text-white mb-4 pb-2">At Divine International Schools, Aba, we nurture gifted children by providing a challenging and supportive environment where potential is recognized and excellence is cultivated.</p>
-                            <a href="" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">Learn More</a>
-                            <a href="{% url 'classes' %}" class="btn btn-dark rounded-pill py-sm-3 px-sm-5 animated slideInRight">Our Classes</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-<!-- End of Carousel image 3 -->
+  <!-- Why Choose Us -->
+<section class="why-choose-us">
+  <h2 class="section-title">Why Choose Us</h2>
+  <div class="features">
+    <div class="feature">
+      <h3>Modern Facilities</h3>
+      <p>State-of-the-art classrooms, labs, and ICT centers.</p>
     </div>
-</div>
+    <div class="feature">
+      <h3>Dedicated Teachers</h3>
+      <p>Experienced and passionate educators.</p>
+    </div>
+    <div class="feature">
+      <h3>Holistic Learning</h3>
+      <p>Academic and moral training combined.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Our Programs -->
+<section class="our-programs">
+  <div class="content-wrapper">
+    <h2 class="section-title" style="color:#fff">Our Programs</h2>
+    <div class="programs">
+      <div class="program">
+        <h3>Pre-Nursery & Nursery</h3>
+        <p>Early childhood education with play-based learning.</p>
+      </div>
+      <div class="program">
+        <h3>Primary</h3>
+        <p>Solid foundation for future academics.</p>
+      </div>
+      <div class="program">
+        <h3>Secondary</h3>
+        <p>Comprehensive curriculum to prepare for higher education.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Upcoming Events -->
+<section class="calendar-container">
+        <h2>Calendar of Events</h2>
+        <div class="event-row">
+            <div class="event">
+                <div class="month">Sep</div>
+                <div class="date">16</div>
+                <div class="description">Science Exibition<br>(Auditorium, 3:45–4:45 pm)</div>
+            </div>
+            <div class="event">
+                <div class="month">July</div>
+                <div class="date">17</div>
+                <div class="description">Mathematics Competition<br>(Enyimba FM 3:45–5:00 pm)</div>
+            </div>
+            <div class="event">
+                <div class="month">Sep</div>
+                <div class="date">22</div>
+                <div class="description">PTA Meeting<br>(Main Hall 5:00 pm)</div>
+            </div>
+            <div class="event">
+                <div class="month">July</div>
+                <div class="date">27</div>
+                <div class="description">School Closes</div>
+            </div>
+            <div class="event">
+                <div class="month">Sep</div>
+                <div class="date">24</div>
+                <div class="description">First Term Resumption<br></div>
+            </div>
+        </div>
+        <div class="calendar-links">
+            <span>● show calendar</span>
+            <span>● show all</span>
+        </div>
+    </section>
+
+    
+<!-- Testimonials -->
+<section class="testimonials-section">
+  <h2 class="section-title">Testimonials</h2>
+  <div class="testimonials">
+    <blockquote>"This school changed my child's life. The growth has been amazing!" – Mrs. Obi</blockquote>
+    <blockquote>"Teachers care and it shows. I'm grateful to be part of this community." – Mr. Okeke</blockquote>
+  </div>
+  <div class="testimonials">
+    <blockquote>"This school changed my child's life. The growth has been amazing!" – Mrs. Obi</blockquote>
+    <blockquote>"Teachers care and it shows. I'm grateful to be part of this community." – Mr. Okeke</blockquote>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="gallery-section">
+  <h2 class="section-title">Our Gallery</h2>
+  <div class="gallery-grid">
+    <img src="{% static 'img/dis_proprietress.jpeg' %}" alt=" activity">
+    <img src="{% static 'img/dis_pupils.jpeg' %}" alt="Science Lab">
+    <img src="{% static 'img/dis_Enyimba_award.jpeg' %}" alt="Sports">
+    <img src="{% static 'img/dis_pupil_grown.jpeg' %}" alt="pupils">
+    <img src="{% static 'img/dis_cross_section_of_teachers.jpeg' %}" alt="teacher">
+  </div>
+</section>
+
+<!-- Contact Prompt Section -->
+<section class="contact-prompt">
+  <div class="container">
+    <h2>Have Questions or Concerns?</h2>
+    <p>If there's anything you're unsure about or would like to know more, we're here to help.</p>
+    <p>Feel free to reach out — our team will be happy to assist you.</p>
+    <a href="{% url 'contact' %}" class="contact-btn">Contact the School</a>
+  </div>
+</section>
 
 
-<!-- Carousel End -->
-
-     
 {% endblock %}
